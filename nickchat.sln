@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NickChat.WinWPF", "NickChat.WinWPF\NickChat.WinWPF.csproj", "{15399C0B-B8B6-4394-80E3-608912B8AA25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NickChat", "NickChat\NickChat.csproj", "{59C40BF0-4950-4D25-85F5-30CE6C02D041}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15399C0B-B8B6-4394-80E3-608912B8AA25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15399C0B-B8B6-4394-80E3-608912B8AA25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15399C0B-B8B6-4394-80E3-608912B8AA25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15399C0B-B8B6-4394-80E3-608912B8AA25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59C40BF0-4950-4D25-85F5-30CE6C02D041}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59C40BF0-4950-4D25-85F5-30CE6C02D041}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59C40BF0-4950-4D25-85F5-30CE6C02D041}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59C40BF0-4950-4D25-85F5-30CE6C02D041}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5184542-B213-4981-A8F8-0F83C188BB75}
+	EndGlobalSection
+EndGlobal
