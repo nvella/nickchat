@@ -23,6 +23,8 @@ namespace NickChat.Models
         /// </summary>
         public DateTime? LastOnline { get; set; }
 
+        public Conversation Conservation { get; set; } = new Conversation();
+
         public Buddy(string name)
         {
             Name = name;
