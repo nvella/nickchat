@@ -3,9 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:NickChat.WinWPF"
+        xmlns:local="clr-namespace:NickChat.WinWPF" xmlns:viewmodels="clr-namespace:NickChat.ViewModels;assembly=NickChat"
         mc:Ignorable="d"
-        Title="Nathanael" MinHeight="370" MinWidth="320" Height="370" Width="320">
+        Title="{Binding Buddy.Name}" MinHeight="370" MinWidth="320" Height="370" Width="320">
+    <Window.DataContext>
+        <viewmodels:ChatWindowViewModel />
+    </Window.DataContext>
     <DockPanel Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
@@ -30,13 +33,14 @@
                         </LinearGradientBrush>
                     </StackPanel.Background>
                     <Image Source="/Images/buddy.png" Width="32" Margin="5,5,5,5"/>
-                    <TextBlock VerticalAlignment="Center">Nathanael</TextBlock>
+                    <TextBlock VerticalAlignment="Center" Text="{Binding Buddy.Name}"/>
+                    <TextBlock VerticalAlignment="Center" Margin="5,0,0,0" FontStyle="Italic" Foreground="Gray" Text="{Binding Buddy.StatusString}"/>
                 </StackPanel>
             </Border>
 
             <DockPanel DockPanel.Dock="Bottom" Margin="0,5,0,0" MinHeight="50">
-                <Button DockPanel.Dock="Right" Content="Send" Padding="5"/>
-                <TextBox DockPanel.Dock="Bottom" MinLines="3" MaxLines="3" Margin="0,0,5,0" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" TextWrapping="Wrap"/>
+                <Button DockPanel.Dock="Right" Content="Send" Padding="5" Command="{Binding CommandSend}"/>
+                <TextBox DockPanel.Dock="Bottom" MinLines="3" MaxLines="3" Margin="0,0,5,0" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" TextWrapping="Wrap" Text="{Binding Message, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             </DockPanel>
 
             <Border Background="White" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" BorderThickness="1,1,1,1">

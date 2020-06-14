@@ -42,7 +42,7 @@ namespace NickChat.WinWPF
         private void BuddiesListView_ItemDoubleClick(object sender, RoutedEventArgs e)
         {
             var item = (ListViewItem)e.Source;
-            var buddyEntry = (BuddyListViewModel.BuddyEntry)item.DataContext;
+            var buddyEntry = (BuddyListWindowViewModel.BuddyList.BuddyListEntry)item.DataContext;
             buddyEntry.OpenCommand.Execute(null);
         }
     }

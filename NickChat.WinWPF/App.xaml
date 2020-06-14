@@ -1,8 +1,7 @@
 ﻿<Application x:Class="NickChat.WinWPF.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:NickChat.WinWPF"
-             StartupUri="BuddyListWindow.xaml">
+             xmlns:local="clr-namespace:NickChat.WinWPF">
     <Application.Resources>
          
     </Application.Resources>
