@@ -6,7 +6,7 @@
         xmlns:ncvm="clr-namespace:NickChat.ViewModels;assembly=NickChat"
         xmlns:local="clr-namespace:NickChat.WinWPF"
         mc:Ignorable="d"
-        Title="Buddy List :: NickChat" MinHeight="635" MinWidth="330" Height="635" Width="330" >
+        Title="Buddy List" MinHeight="635" MinWidth="330" Height="635" Width="330" >
     <Window.DataContext>
         <ncvm:BuddyListWindowViewModel/>
     </Window.DataContext>

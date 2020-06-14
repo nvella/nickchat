@@ -5,11 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NickChat.WinWPF"
         mc:Ignorable="d"
-        Title="Nathanael :: NickChat" MinHeight="370" MinWidth="320" Height="370" Width="320">
+        Title="Nathanael" MinHeight="370" MinWidth="320" Height="370" Width="320">
     <DockPanel Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
         <Menu DockPanel.Dock="Top">
-            <MenuItem Header="_File" />
-            <MenuItem Header="_Help" />
+            <MenuItem Header="_File">
+                <MenuItem Header="_Close" />
+            </MenuItem>
+            <MenuItem Header="_Help">
+
+            </MenuItem>
         </Menu>
 
         <StatusBar DockPanel.Dock="Bottom">
@@ -17,13 +21,163 @@
         </StatusBar>
 
         <DockPanel Margin="5,5,5,0" >
+            <Border DockPanel.Dock="Top" Margin="0,0,0,5" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" BorderThickness="1,1,1,1">
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
+                            <GradientStop Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}" Offset="1"/>
+                        </LinearGradientBrush>
+                    </StackPanel.Background>
+                    <Image Source="/Images/buddy.png" Width="32" Margin="5,5,5,5"/>
+                    <TextBlock VerticalAlignment="Center">Nathanael</TextBlock>
+                </StackPanel>
+            </Border>
+
             <DockPanel DockPanel.Dock="Bottom" Margin="0,5,0,0" MinHeight="50">
                 <Button DockPanel.Dock="Right" Content="Send" Padding="5"/>
                 <TextBox DockPanel.Dock="Bottom" MinLines="3" MaxLines="3" Margin="0,0,5,0" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" TextWrapping="Wrap"/>
             </DockPanel>
 
             <Border Background="White" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" BorderThickness="1,1,1,1">
-                <FlowDocumentScrollViewer />
+                <FlowDocumentScrollViewer>
+                    <FlowDocument PagePadding="0" FontSize="12" FontFamily="Segoe UI">
+                        <FlowDocument.Resources>
+                            <!-- This style is used to set the margins for all paragraphs in the FlowDocument to 0. -->
+                            <Style TargetType="{x:Type Paragraph}">
+                                <Setter Property="Margin" Value="0,0,0,5"/>
+                            </Style>
+                        </FlowDocument.Resources>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Red" FontWeight="Bold">Nathanael:</Run>
+                            <Run>hello</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Red" FontWeight="Bold">Nathanael:</Run>
+                            <Run>hello</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Blue" FontWeight="Bold">You:</Run>
+                            <Run>jeff</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Red" FontWeight="Bold">Nathanael:</Run>
+                            <Run>hello</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Red" FontWeight="Bold">Nathanael:</Run>
+                            <Run>hello</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Blue" FontWeight="Bold">You:</Run>
+                            <Run>jeff</Run>
+                        </Paragraph>
+
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Red" FontWeight="Bold">Nathanael:</Run>
+                            <Run>hello</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Red" FontWeight="Bold">Nathanael:</Run>
+                            <Run>hello</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Blue" FontWeight="Bold">You:</Run>
+                            <Run>jeff</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Red" FontWeight="Bold">Nathanael:</Run>
+                            <Run>hello</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Red" FontWeight="Bold">Nathanael:</Run>
+                            <Run>hello</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Blue" FontWeight="Bold">You:</Run>
+                            <Run>jeff</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Red" FontWeight="Bold">Nathanael:</Run>
+                            <Run>hello</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Red" FontWeight="Bold">Nathanael:</Run>
+                            <Run>hello</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Blue" FontWeight="Bold">You:</Run>
+                            <Run>jeff</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Red" FontWeight="Bold">Nathanael:</Run>
+                            <Run>hello</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Red" FontWeight="Bold">Nathanael:</Run>
+                            <Run>hello</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Blue" FontWeight="Bold">You:</Run>
+                            <Run>jeff</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Red" FontWeight="Bold">Nathanael:</Run>
+                            <Run>hello</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Red" FontWeight="Bold">Nathanael:</Run>
+                            <Run>hello</Run>
+                        </Paragraph>
+
+                        <Paragraph>
+                            <Run>13:00</Run>
+                            <Run Foreground="Blue" FontWeight="Bold">You:</Run>
+                            <Run>jeff</Run>
+                        </Paragraph>
+
+                    </FlowDocument>
+                </FlowDocumentScrollViewer>
             </Border>
         </DockPanel>
     </DockPanel>
