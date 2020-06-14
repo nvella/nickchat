@@ -11,13 +11,15 @@ namespace NickChat.ViewModels
     public class ChatWindowViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged = (_, __) => { };
-        public Buddy? Buddy { get; set; }
+        public Buddy Buddy { get; set; }
 
         public string Message { get; set; } = "";
         public ICommand CommandSend { get; set; }
 
         public ChatWindowViewModel()
         {
+            Buddy = null!; // For Designer
+
             CommandSend = new SendCommand(this);
         }
 
@@ -42,7 +44,7 @@ namespace NickChat.ViewModels
 
             public void Execute(object parameter)
             {
-                _viewModel.Buddy = new Buddy(_viewModel.Message);
+                _viewModel.Buddy.Name = _viewModel.Message;
                 _viewModel.Buddy.Online = true;
             }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using NickChat.Models;
 using NickChat.ViewModels;
@@ -9,14 +10,21 @@ namespace NickChat
     public class ChatApp
     {
         private IPlatformIntegration _platform;
+
         public BuddyListWindowViewModel BuddyListWvm { get; }
         public Dictionary<Buddy, ChatWindowViewModel> ChatViewModels { get; } = new Dictionary<Buddy, ChatWindowViewModel>();
+
+        public ObservableCollection<Buddy> Favourites { get; } = new ObservableCollection<Buddy>();
 
         public ChatApp(IPlatformIntegration platform)
         {
             _platform = platform;
 
-            BuddyListWvm = new BuddyListWindowViewModel();
+            BuddyListWvm = new BuddyListWindowViewModel(this);
+
+            Favourites.Add(new Buddy("Buddy A"));
+            Favourites.Add(new Buddy("Buddy B"));
+            Favourites.Add(new Buddy("Buddy C"));
         }
 
         public void Start()

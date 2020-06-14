@@ -17,9 +17,17 @@ namespace NickChat.WinWPF
     /// </summary>
     public partial class ChatWindow : Window
     {
+        public bool IsClosed { get; private set; } = false;
+
         public ChatWindow()
         {
             InitializeComponent();
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            IsClosed = true;
         }
     }
 }

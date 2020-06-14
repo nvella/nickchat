@@ -41,14 +41,17 @@ namespace NickChat.WinWPF
             _buddyListWindow.Close();
         }
 
-        public void ShowChatWindow(ChatWindowViewModel viewModel)
+        public async void ShowChatWindow(ChatWindowViewModel viewModel)
         {
-            if (!_chatWindows.ContainsKey(viewModel))
-                _chatWindows.Add(viewModel, new ChatWindow());
+            if (!_chatWindows.ContainsKey(viewModel) || _chatWindows[viewModel].IsClosed)
+                _chatWindows[viewModel] = new ChatWindow();
 
             var window = _chatWindows[viewModel];
+
             window.DataContext = viewModel;
             window.Show();
+            await Task.Delay(10);
+            window.Activate();
         }
 
         public void CloseChatWindow(ChatWindowViewModel viewModel)
